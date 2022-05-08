@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
 SWEP.Category = "ArcCW - Urban Coalition"
-SWEP.UC_CategoryPack = "1Urban One-Offs" --this can't be right
+SWEP.UC_CategoryPack = "5Urban One-Offs"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
