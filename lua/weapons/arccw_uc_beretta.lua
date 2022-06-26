@@ -55,8 +55,8 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/c_uc_beretta.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_uc_beretta.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ud_glock.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_glock.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -371,124 +371,7 @@ local desg_cal = {
 }
 
 SWEP.Hook_NameChange = function(wep,name)
-    barrel = desg_barr[wep.Attachments[2].Installed] or 0
-    caliber = desg_cal[wep.Attachments[4].Installed] or 0
-    trueNames = GetConVar("arccw_truenames"):GetBool()
-
-    start = ""
-    mid = ""
-    suffix = ""
-
-    if trueNames then
-        start = "Glock "
-
-        if caliber == 0 then
-            if barrel == 1 then
-                mid = "18C"
-            elseif barrel == 2 then
-                mid = "17L"
-            elseif barrel == 5 then
-                mid = "18"
-            elseif barrel == 8 then
-                mid = "26"
-            else
-                mid = "17"
-            end
-        else
-            if caliber == 1 then
-                if barrel == 2 then
-                    mid = "24"
-                elseif barrel == 8 then
-                    mid = "27"
-                else
-                    mid = "22"
-                end
-            elseif caliber == 2 then
-                if barrel == 8 then
-                    mid = "33"
-                else
-                    mid = "31"
-                end
-            elseif caliber == 3 then
-                if barrel == 2 then
-                    mid = "40"
-                elseif barrel == 8 then
-                    mid = "29"
-                else
-                    mid = "20"
-                end
-            elseif caliber == 4 then
-                if barrel == 8 then
-                    mid = "30"
-                else
-                    mid = "21"
-                end
-            elseif caliber == 5 then
-                mid = "44"
-            elseif caliber == 6 then
-                if barrel == 8 then
-                    mid = "28"
-                else
-                    mid = "25"
-                end
-            end
-        end
-    else
-        start = "GEN"
-
-        if caliber == 0 then
-            mid = "3"
-        elseif caliber == 1 then
-            mid = "5"
-        elseif caliber == 2 then
-            mid = "6"
-        elseif caliber == 3 then
-            mid = "8"
-        elseif caliber == 4 then
-            mid = "11"
-        elseif caliber == 5 then
-            mid = "22"
-        elseif caliber == 6 then
-            mid = "15"
-        end
-
-        if barrel == 2 then
-            suffix = "L"
-        elseif barrel == 8 then
-            suffix = "K"
-        end
-    end
-
-    if barrel == 1 and (caliber ~= 0 or !trueNames) then
-        suffix = " Auto"
-    elseif barrel == 2 and !trueNames then
-        suffix = "L"
-    elseif barrel == 3 then
-        if trueNames then
-            suffix = "XXXL"
-        else
-            suffix = " Euro Carbine"
-        end
-    elseif barrel == 4 then
-        suffix = " Custom"
-    elseif barrel == 5 then
-        suffix = "CS"
-    elseif barrel == 6 then
-        if trueNames then
-            suffix = " Hush Puppy"
-        else
-            suffix = " Silent Mistress"
-        end
-    elseif barrel == 7 then
-        if trueNames then
-            suffix = " NyteSyte"
-        else
-            suffix = " Homeboy"
-        end
-    end
-
-    -- Todo: Subcompact variants when the barrel variant comes out
-    return start .. mid .. suffix
+    -- todo
 end
 
 -- Animations --
