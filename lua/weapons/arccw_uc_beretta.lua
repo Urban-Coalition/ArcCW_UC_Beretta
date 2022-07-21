@@ -190,7 +190,8 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/glock/"
+local path = ")^weapons/arccw_uc_beretta/"
+local path2 = ")^weapons/arccw_ud/glock/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {
@@ -201,10 +202,18 @@ SWEP.ShootSound = {
     path .. "fire-05.ogg",
     path .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.ShootSoundSilenced = {
+    path .. "fire-sup-01.ogg",
+    path .. "fire-sup-02.ogg",
+    path .. "fire-sup-03.ogg",
+    path .. "fire-sup-04.ogg",
+    path .. "fire-sup-05.ogg",
+    path .. "fire-sup-06.ogg"
+}
+
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
-SWEP.ShootDrySound = path .. "dryfire.ogg"
+SWEP.DistantShootSoundSilenced = nil
+SWEP.ShootDrySound = path2 .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-01.ogg",
@@ -394,7 +403,7 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = path .. "slide_pull_new.ogg",  t = 0.4, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.4, c = ci},
-            {s = path .. "slide_rel_new.ogg",        t = 0.6, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -683,7 +692,7 @@ SWEP.Animations = {
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rattel, t = 1.2},
             {s = path .. "sliderel_deact.ogg",  t = 1.62, c = ci},
-            {s = path .. "chamber.ogg",        t = 1.85, c = ci},
+            {s = path .. "sliderel.ogg",        t = 1.85, c = ci},
             {s = rottle, t = 1.9},
         },
     },
@@ -706,7 +715,7 @@ SWEP.Animations = {
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.15},
-            {s = path .. "chamber.ogg",      t = 1.39, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.39, c = ci},
         },
     },
 
@@ -754,7 +763,7 @@ SWEP.Animations = {
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 0.9},
-            {s = path .. "chamber.ogg",      t = 1.35, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.35, c = ci},
         },
     },
 
@@ -802,7 +811,7 @@ SWEP.Animations = {
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.3},
-            {s = path .. "chamber.ogg",      t = 1.42, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.42, c = ci},
         },
     },
 
@@ -847,7 +856,7 @@ SWEP.Animations = {
             {s = common .. "magdrop.ogg",  t = 0.55},
             {s = rattel, t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.33, c = ci},
-            {s = path .. "chamber.ogg",        t = 1.525, c = ci},
+            {s = path .. "sliderel.ogg",        t = 1.525, c = ci},
             {s = rottle, t = 1.6},
         },
     },
