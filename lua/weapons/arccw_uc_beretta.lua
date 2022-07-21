@@ -703,7 +703,7 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = path .. "magout.ogg",        t = 0.13, c = ci},
             {s = common .. "magpouch_pull_small.ogg", t = 0.35},
-            {s = path .. "magin.ogg",         t = 0.55, c = ci},
+            {s = path .. "magin.ogg",         t = 0.75, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.15},
