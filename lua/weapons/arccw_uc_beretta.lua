@@ -243,9 +243,9 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
-SWEP.BulletBones = {
-    [2] = "glock_bullet1"
-}
+//SWEP.BulletBones = { need to setup boolet in blend
+  //  [2] = "glock_bullet1"
+//}
 
 SWEP.AttachmentElements = {
     ["uc_beretta_rail_optic"] = {
@@ -452,13 +452,13 @@ SWEP.Attachments = {
         PrintName = "Slide",
         DefaultAttName = "Standard Slide",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
-        Slot = "ud_glock_slide",
+        Slot = "uc_beretta_slide",
     },
     {
         PrintName = "Frame",
         DefaultAttName = "Standard Frame",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_frame.png", "smooth mips"),
-        Slot = "ud_glock_frame",
+        Slot = "uc_beretta_frame",
     },
     {
         PrintName = "Caliber",
@@ -482,25 +482,13 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, -1.3, 5),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, -5.8, -0.2),
+            vang = Angle(90, 90, -90),
         },
-        MergeSlots = {7},
-        ExcludeFlags = {"ud_glock_slide_subcompact"}
-    },
-    {
-        Hidden = true,
-        PrintName = "Tactical",
-        Slot = {"tac_pistol"},
-        Bone = "body",
-        Offset = {
-            vpos = Vector(0, -1.3, 5),
-            vang = Angle(90, 0, -90),
-        }, -- This slot is obsolete and exists solely for compatiblity with old loadouts. Do not remove.
     },
     {
         PrintName = "Magazine",
-        Slot = {"ud_glock_mag"},
+        Slot = {"uc_beretta_mag"},
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_mag_17.png", "smooth mips"),
         DefaultAttName = "17-Round Mag",
     },
@@ -510,8 +498,8 @@ SWEP.Attachments = {
         DefaultAttName = "No Stock",
         Bone = "body",
         Offset = {
-            vpos = Vector(0.1, 2, -1.4),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 1.8, 3.3),
+            vang = Angle(90, 90, -90),
         },
     },
     {
